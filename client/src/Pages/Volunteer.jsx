@@ -10,7 +10,7 @@ const Work = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${config.apiBaseUrl}/volunteer`);
+                const response = await axios.get("https://personal-portfolio-backend-dusky.vercel.app/api/volunteer");
                 const sortedData = response.data.sort((a, b) => new Date(b.sortDate) - new Date(a.sortDate));
                 setCardsData(sortedData);
             } catch (error) {

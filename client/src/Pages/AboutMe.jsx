@@ -13,8 +13,8 @@ const AboutMe = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await await axios.get(`${config.apiBaseUrl}/aboutMe`);
-        setImages(response.data[0].aboutMe); // Assuming your API response structure is { test: [...] }
+        const response = await await axios.get("https://personal-portfolio-backend-dusky.vercel.app/api/volunteer");
+        setImages(response.data[0].aboutMe);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching images:", error);
