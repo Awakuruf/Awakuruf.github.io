@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Awakuruf.Github.io/client/static/css/main.ffad981f.css",
+    "main.js": "/Awakuruf.Github.io/client/static/js/main.b9ad4295.js",
+    "static/media/projects.JPEG": "/Awakuruf.Github.io/client/static/media/projects.ed2d72712ed266ccad5d.JPEG",
+    "static/media/career.jpg": "/Awakuruf.Github.io/client/static/media/career.4be5ce3ae780dc7ca437.jpg",
+    "static/media/volunteer.jpg": "/Awakuruf.Github.io/client/static/media/volunteer.f5bf5ba36f59a7232cd5.jpg",
+    "index.html": "/Awakuruf.Github.io/client/index.html",
+    "main.ffad981f.css.map": "/Awakuruf.Github.io/client/static/css/main.ffad981f.css.map",
+    "main.b9ad4295.js.map": "/Awakuruf.Github.io/client/static/js/main.b9ad4295.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffad981f.css",
+    "static/js/main.b9ad4295.js"
+  ]
+}
