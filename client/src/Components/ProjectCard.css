@@ -1,0 +1,112 @@
+.project-card {
+    flex: 1 1 25%;
+    /* Adjust width as needed */
+    max-width: 25%;
+    /* Adjust width as needed */
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    /* Ensures cards are in a row */
+    flex-direction: column;
+    /* Ensures children stack vertically */
+}
+
+
+.project-image-container {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+}
+
+.project-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px; /* Example: Set max height for the image */
+}
+
+.project-image-container h2 {
+    margin: 10px 0;
+}
+
+.project-details {
+    overflow: hidden;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.project-details h3 {
+    margin-top: 0;
+}
+
+.github-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.github-button:hover {
+    background-color: #2c3338; /* Slightly lighter shade for hover effect */
+}
+
+@media (max-width: 1200px) {
+    .project-card {
+        flex: 1 1 33.33%;
+        /* Adjust width as needed */
+        max-width: 33.33%;
+        /* Adjust width as needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 50%;
+        /* Adjust width as needed */
+        max-width: 50%;
+        /* Adjust width as needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        flex: 1 1 100%;
+        /* Adjust width as needed */
+        max-width: 100%;
+        /* Adjust width as needed */
+    }
+}
+
+.project-details > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-details h3 {
+    margin-top: 0;
+}
+
+.descriptions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.descriptions-list li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 8px 0 8px;
+}
+
+.skills-container {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+    justify-content: center;
+}

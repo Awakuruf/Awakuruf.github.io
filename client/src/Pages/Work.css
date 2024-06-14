@@ -1,0 +1,40 @@
+/* Work.css */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-color: #131313;
+}
+
+.card {
+    width: 100%; 
+    max-width: 1200px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+body {
+    background-color: #131313;
+}
+
+.card-container h1 {
+    background-color: #2f77c9;
+    background-image: linear-gradient(to right,
+            #89d8e2 0%,
+            #33c7ec 0%,
+            #2f77c9 21%,
+            #187591 52%,
+            #186cda 90%,
+            #187599 100%);
+    background-size: 100%;
+    font-size: 2.5rem;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}

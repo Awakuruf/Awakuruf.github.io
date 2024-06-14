@@ -1,0 +1,20 @@
+.skill {
+    display: inline-flex;
+    align-items: center;
+    background-color: #187591;
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-right: 8px;
+    margin-top: 20px;
+}
+
+.skill-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 4px; 
+}
+
+.skill-name {
+    font-size: 14px; 
+}

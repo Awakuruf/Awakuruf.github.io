@@ -1,0 +1,25 @@
+.media {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    background-color: #0077b5;
+    color: white;
+    border-radius: 5px;
+    padding: 6px 12px; /* Decrease padding to make it smaller */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+
+.media:hover {
+    background-color: #005f8a;
+}
+
+.linkedin-icon {
+    font-size: 20px; 
+    margin-right: 6px; 
+}
+
+.media-text {
+    font-size: 25px; 
+}
