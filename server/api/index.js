@@ -1,8 +1,11 @@
+// server/api/index.js
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const { createServer } = require('@vercel/node');
+
 const app = express();
-const port = process.env.PORT || 3000;
 
 require('dotenv').config();
 app.use(cors());
@@ -10,7 +13,6 @@ app.use(cors());
 const uri = process.env.MONGODB_URI;
 
 if (!uri) {
-    console.log(uri);
     console.error("MONGODB_URI is not set");
     process.exit(1);
 }
@@ -28,8 +30,8 @@ connect();
 
 app.get('/work', async (req, res) => {
     try {
-        const db = mongoose.connection.db; 
-        const collection = db.collection('work'); 
+        const db = mongoose.connection.db;
+        const collection = db.collection('work');
         const data = await collection.find().toArray();
         res.json(data);
     } catch (error) {
@@ -39,8 +41,8 @@ app.get('/work', async (req, res) => {
 
 app.get('/projects', async (req, res) => {
     try {
-        const db = mongoose.connection.db; 
-        const collection = db.collection('projects'); 
+        const db = mongoose.connection.db;
+        const collection = db.collection('projects');
         const data = await collection.find().toArray();
         res.json(data);
     } catch (error) {
@@ -50,8 +52,8 @@ app.get('/projects', async (req, res) => {
 
 app.get('/volunteer', async (req, res) => {
     try {
-        const db = mongoose.connection.db; 
-        const collection = db.collection('volunteer'); 
+        const db = mongoose.connection.db;
+        const collection = db.collection('volunteer');
         const data = await collection.find().toArray();
         res.json(data);
     } catch (error) {
@@ -61,8 +63,8 @@ app.get('/volunteer', async (req, res) => {
 
 app.get('/aboutMe', async (req, res) => {
     try {
-        const db = mongoose.connection.db; 
-        const collection = db.collection('carousel'); 
+        const db = mongoose.connection.db;
+        const collection = db.collection('carousel');
         const data = await collection.find().toArray();
         res.json(data);
     } catch (error) {
@@ -70,6 +72,4 @@ app.get('/aboutMe', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
+module.exports = createServer(app);
