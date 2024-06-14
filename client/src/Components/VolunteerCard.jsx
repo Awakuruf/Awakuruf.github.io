@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./WorkCard.css";
-import Skill from "./Skill";
 import Media from "./Media";
 
 const VolunteerCard = ({ data }) => {

@@ -3,6 +3,8 @@ import { Container, Typography, Box, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import axios from "axios";
 import Carousel from "../Components/Carousel";
+import config from '../config';
+
 
 const AboutMe = () => {
   const [images, setImages] = useState([]);
@@ -11,7 +13,7 @@ const AboutMe = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/aboutMe");
+        const response = await await axios.get(`${config.apiBaseUrl}/aboutMe`);
         setImages(response.data[0].aboutMe); // Assuming your API response structure is { test: [...] }
         setLoading(false);
       } catch (error) {

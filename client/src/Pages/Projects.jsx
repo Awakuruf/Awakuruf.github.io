@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProjectCard from "../Components/ProjectCard";
 import "./Projects.css";
+import config from '../config.js';
 
 const Projects = () => {
     const [cardsData, setCardsData] = useState([]);
@@ -9,7 +10,7 @@ const Projects = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/projects");
+                const response = await axios.get(`${config.apiBaseUrl}/projects`);
                 const sortedData = response.data.sort(
                     (a, b) => new Date(b.sortDate) - new Date(a.sortDate)
                 );
