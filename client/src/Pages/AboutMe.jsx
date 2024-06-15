@@ -13,7 +13,7 @@ const AboutMe = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await await axios.get("https://personal-portfolio-backend-dusky.vercel.app/api/volunteer");
+        const response = await await axios.get("https://personal-portfolio-backend-dusky.vercel.app/api/aboutMe");
         setImages(response.data[0].aboutMe);
         setLoading(false);
       } catch (error) {
