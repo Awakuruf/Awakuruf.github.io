@@ -1,4 +1,4 @@
-## Hi, I'm [Daichi Furukawa](https://bento.me/daichif) 👋
+## Hi, I'm [Daichi Furukawa](https://awakuruf.github.io/) 👋
 
 📚 I'm a Cognitive System & Computer Science undergraduate student at University of British Columbia, graduating in 2025.
 
@@ -6,7 +6,7 @@
 
 👀 I’m interested in Software Development, Artificial Intelligence Engineering and Cloud Engineering!
 
-💻 Check out my portfolio website (**Temporary**) at [https://bento.me/daichif](https://bento.me/daichif)
+💻 Check out my portfolio website (**Temporary**) at [https://awakuruf.github.io/](https://awakuruf.github.io/)
 
 ⚙️ Development of ReactJS Full-Stack portfolio is currently in progress!
 
