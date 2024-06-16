@@ -1,0 +1,43 @@
+/* src/Components/Spinner.css */
+
+.spinner-container {
+    text-align: center;
+    margin: 100px auto;
+    color: white; /* Make the text white */
+}
+
+.loading-text {
+    font-size: 1.5em; /* Make the text larger */
+    font-family: 'Arial', sans-serif; /* Use a more stylish font */
+    margin-bottom: 20px; /* Add some margin to separate the text from the spinner */
+    letter-spacing: 2px; /* Add some letter spacing for style */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for a cool effect */
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 0 auto; /* Center the spinner */
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    animation-delay: -1.0s;
+}
+
+@keyframes sk-bounce {
+    0%, 100% { transform: scale(0.0) }
+    50% { transform: scale(1.0) }
+}

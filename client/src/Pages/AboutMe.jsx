@@ -3,8 +3,7 @@ import { Container, Typography, Box, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import axios from "axios";
 import Carousel from "../Components/Carousel";
-import config from '../config';
-
+import Spinner from "../Components/Spinner"; // Import the Spinner component
 
 const AboutMe = () => {
   const [images, setImages] = useState([]);
@@ -13,11 +12,12 @@ const AboutMe = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await await axios.get("https://personal-portfolio-backend-dusky.vercel.app/api/aboutMe");
+        const response = await axios.get("https://personal-portfolio-backend-dusky.vercel.app/api/aboutMe");
         setImages(response.data[0].aboutMe);
-        setLoading(false);
       } catch (error) {
         console.error("Error fetching images:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -77,7 +77,7 @@ const AboutMe = () => {
 
       <Box sx={{ mt: 4 }}>
         {loading ? (
-          <Typography>Loading...</Typography>
+          <Spinner /> 
         ) : images.length > 0 ? (
           <Carousel images={images} />
         ) : (

@@ -5,7 +5,7 @@ function Cards() {
     return (
         <div>
             <div className="services">
-                <h1>See for it yourself!</h1>
+                <h1>Check it out!</h1>
                 <div className="services__container">
                     <div className="services__card">
                         <h2>Projects</h2>
