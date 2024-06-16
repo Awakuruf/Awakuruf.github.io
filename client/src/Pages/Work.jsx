@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchData } from "../actions/pageActions";
+import { fetchData } from "../redux/actions/pageActions";
 import Card from "../Components/WorkCard.jsx"; 
 import "./Work.css";
 import Spinner from "../Components/Spinner";
