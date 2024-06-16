@@ -1,3 +1,4 @@
+// src/Projects.js
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/actions/pageActions";
@@ -10,11 +11,7 @@ const Projects = () => {
   const { cardsData, loading, error } = useSelector((state) => state.page);
 
   useEffect(() => {
-    dispatch(
-      fetchData(
-        "https://personal-portfolio-backend-dusky.vercel.app/api/projects"
-      )
-    );
+    dispatch(fetchData("https://personal-portfolio-backend-dusky.vercel.app/api/projects"));
   }, [dispatch]);
 
   return (
@@ -26,8 +23,8 @@ const Projects = () => {
         <p>Error: {error}</p>
       ) : (
         <div className="project-cards-container">
-          {cardsData.map((project) => (
-            <ProjectCard key={project._id["$oid"]} project={project} />
+          {cardsData.map((project, index) => (
+            <ProjectCard key={`${project.projectName}-${project.startDate}-${index}`} project={project} />
           ))}
         </div>
       )}

@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
   };
-
+  
   return (
     <motion.div
       className="project-card"
